@@ -18,7 +18,7 @@ get '/particulares' do
 end
 
 get '/empresas' do
-  erb :about
+  erb :empresas
 end
 
 get '/presupuesto' do
