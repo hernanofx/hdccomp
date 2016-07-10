@@ -3,9 +3,28 @@
     <head>
         <meta charset="utf-8">
          <title>testing</title>
+         <script language="javascript" type="text/javascript">
+    var slideIndex = 0;
+    carousel();
+    function carousel() {
+    var i;
+    var x = document.getElementsByClassName("slide");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+    </script>
      </head>
     <body>
-
+      <div id="carousel" class="slide">
+         <img class="slide" src="/imagenes/diagnostico-computadora-reparacion3.jpg"> <a class="w3-btn-floating" onclick="plusDivs(-1)">&#10094;</a>
+         <img class="slide" src="/imagenes/diagnostico-computadora-reparacion5.jpg"> <a class="w3-btn-floating" onclick="plusDivs(-1)">&#10095;</a>
+         <img class="slide" src="/imagenes/diagnostico-computadora-reparacion5.jpg"> <a class="w3-btn-floating" onclick="plusDivs(-1)">&#10096;</a>
+     </div>
       <div class="w3-container w3-section w3-green">
           <h1>Hernan, en h1</h1>
           <p>No hay mucho que quiera decir en este momento, parrafo</p>
