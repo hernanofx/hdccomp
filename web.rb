@@ -5,9 +5,10 @@ get '/' do
   erb :index
 end
 
-get '/' do
+=begin get '/' do
   erb :layout
 end
+=end
 
 get '/home' do
   erb :index
