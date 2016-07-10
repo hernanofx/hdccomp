@@ -2,12 +2,33 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Index</title>
+    <script language="javascript" type="text/javascript">
+      var slideIndex = 0;
+        carousel();
+
+      function carousel() {
+      var i;
+      var x = document.getElementsByClassName("slide");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+        }
+        slideIndex++;
+      if (slideIndex > x.length) {slideIndex = 1}
+        x[slideIndex-1].style.display = "block";
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
   </head>
-<h2>lalalala</h2>
 <body>
-  <p>
-    pupuou
-  </p> 
-</body>
+<div id="carousel">
+    <img class="slide" src="/imagenes/diagnostico-computadora-reparacion3.jpg" alt="reparacion">
+          <a class="w3-btn-floating" onclick="plusDivs(-1)">&#10094;</a>
+        <img class="slide" src="/imagenes/diagnostico-computadora-reparacion5.jpg" alt="reparacion">
+          <a class="w3-btn-floating" onclick="plusDivs(-1)">&#10095;</a>
+        <img class="slide" src="/imagenes/diagnostico-computadora-reparacion5.jpg" alt="reparacion">
+          <a class="w3-btn-floating" onclick="plusDivs(-1)">&#10096;</a>
+    <img src="/diagnostico-computadora-reparacion3.jpg" alt="Car" style="width:100%">
+  </div>
+ </body>
 </html>
