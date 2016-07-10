@@ -5,7 +5,7 @@ get '/' do
   erb :index
 end
 
-begin get '/' do
+get '/' do
   erb :layout
 end
 
