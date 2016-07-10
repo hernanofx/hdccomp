@@ -12,7 +12,7 @@
     var i;
     var x = document.getElementsByClassName("slide");
     for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
+      x[i].style.display = "block";
     }
     slideIndex++;
     if (slideIndex > x.length) {slideIndex = 1}
@@ -23,9 +23,12 @@
 
   <body>
     <div id="carousel">
-        <img class="slide" src="/public/imagenes/diagnostico-computadora-reparacion3.jpg"> <a class="w3-btn-floating" onclick="plusDivs(-1)">&#10094;</a>
-        <img class="slide" src="/public/imagenes/diagnostico-computadora-reparacion5.jpg"> <a class="w3-btn-floating" onclick="plusDivs(-1)">&#10095;</a>
-        <img class="slide" src="/public/imagenes/diagnostico-computadora-reparacion5.jpg"> <a class="w3-btn-floating" onclick="plusDivs(-1)">&#10096;</a>
+        <img class="slide" src="/imagenes/diagnostico-computadora-reparacion3.jpg" alt="reparacion">
+          <a class="w3-btn-floating" onclick="plusDivs(-1)">&#10094;</a>
+        <img class="slide" src="/imagenes/diagnostico-computadora-reparacion5.jpg" alt="reparacion">
+          <a class="w3-btn-floating" onclick="plusDivs(-1)">&#10095;</a>
+        <img class="slide" src="/imagenes/diagnostico-computadora-reparacion5.jpg" alt="reparacion">
+          <a class="w3-btn-floating" onclick="plusDivs(-1)">&#10096;</a>
     </div>
     <img src="/diagnostico-computadora-reparacion3.jpg" alt="Car" style="width:100%">
 
