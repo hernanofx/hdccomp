@@ -4,48 +4,23 @@
         <meta charset="utf-8">
          <title>testing</title>
          <script language="javascript" type="text/javascript">
-         var i = 0;
-         var image = new Array();
-         image[0]="/imagenes/diagnostico-computadora-reparacion3.jpg";
-         image[1]="/imagenes/diagnostico-computadora-reparacion3.jpg";
-         image[2]="/imagenes/diagnostico-computadora-reparacion3.jpg";
-         var k = image.length-1;
-         var caption = new Array();
-         caption[0] = "Imagen 1";
-         caption[1] = "Imagen 2";
-         caption[2] = "Imagen 3";
-         function swapImage(){
-         var el = document.getElementById("carousel");
-         el.innerHTML=caption[i];
-         var img= document.getElementById("slide");
-         img.src= image[i];
-         if(i < k ) { i++;}
-         else  { i = 0; }
-         setTimeout("swapImage()",5000);
+         var slideIndex = 1;
+         showDivs(slideIndex);
+         function plusDivs(n) {
+         showDivs(slideIndex += n);
+         }
+         function showDivs(n) {
+             var i;
+             var x = document.getElementsByClassName("slide");
+             if (n > x.length) {slideIndex = 1}
+             if (n < 1) {slideIndex = x.length} ;
+             for (i = 0; i < x.length; i++) {
+                 x[i].style.display = "none";
+             }
+             x[slideIndex-1].style.display = "block";
          }
 
-         function addLoadEvent(func) {
-         var oldonload = window.onload;
-         if (typeof window.onload != 'function') {
-         window.onload = func;
-         }
-         else {
-         window.onload = function() {
-         if (oldonload) {
-         oldonload();
-         }
-         func();}}}
-         addLoadEvent(function() {
-         swapImage(); });
-
-
-    </script>
-    <div id="carousel" class="slide">
-       <img class="slide" src="/imagenes/diagnostico-computadora-reparacion3.jpg"> <a class="w3-btn-floating" onclick="carousel(-1)">Left;</a>
-       <img class="slide" src="/imagenes/diagnostico-computadora-reparacion5.jpg"> <a class="w3-btn-floating" onclick="carousel(+1)">Right;</a>
-       <img class="slide" src="/imagenes/diagnostico-computadora-reparacion6.jpg"> <a class="w3-btn-floating" onclick="carousel(+0)">Left;</a>
-   </div>
-
+         </script>
 
      </head>
     <body>
