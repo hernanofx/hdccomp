@@ -4,19 +4,39 @@
         <meta charset="utf-8">
          <title>testing</title>
          <script language="javascript" type="text/javascript">
-    var slideIndex = 1;
-    carousel();
-    function carousel() {
-    var i;
-    var x = document.getElementsByClassName("slide");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > x.length) {slideIndex = +1}
-    x[slideIndex-1].style.display = "block";
-    setTimeout(carousel, 2000); // Change image every 2 seconds
-    }
+         var i = 0;
+         var image = new Array();
+         image[0]="/imagenes/diagnostico-computadora-reparacion3.jpg";
+         image[1]="/imagenes/diagnostico-computadora-reparacion3.jpg";
+         image[2]="/imagenes/diagnostico-computadora-reparacion3.jpg";
+         var k = image.length-1;
+         var caption = new Array();
+         caption[0] = "Imagen 1";
+         caption[1] = "Imagen 2";
+         caption[2] = "Imagen 3";
+         function swapImage(){
+         var el = document.getElementById("mydiv");
+         el.innerHTML=caption[i];
+         var img= document.getElementById("slide");
+         img.src= image[i];
+         if(i < k ) { i++;}
+         else  { i = 0; }
+         setTimeout("swapImage()",5000);
+         }
+
+         function addLoadEvent(func) {
+         var oldonload = window.onload;
+         if (typeof window.onload != 'function') {
+         window.onload = func;
+         }
+         else {
+         window.onload = function() {
+         if (oldonload) {
+         oldonload();
+         }
+         func();}}}
+         addLoadEvent(function() {
+         swapImage(); });
     </script>
      </head>
     <body>
