@@ -4,21 +4,19 @@
         <meta charset="utf-8">
          <title>testing</title>
          <script language="javascript" type="text/javascript">
-         var slideIndex = 1;
-         showDivs(slideIndex);
-         function plusDivs(n) {
-         showDivs(slideIndex += n);
-         }
-         function showDivs(n) {
-             var i;
-             var x = document.getElementsByClassName("slide");
-             if (n > x.length) {slideIndex = 1}
-             if (n < 1) {slideIndex = x.length} ;
-             for (i = 0; i < x.length; i++) {
-                 x[i].style.display = "none";
-             }
-             x[slideIndex-1].style.display = "block";
-         }
+         var slideIndex = 0;
+         carousel();
+         function carousel() {
+          var i;
+          var x = document.getElementsByClassName("slide");
+          for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > x.length) {slideIndex = 1}
+          x[slideIndex-1].style.display = "block";
+          setTimeout(carousel, 2000); // Change image every 2 seconds
+}
 
          </script>
 
@@ -27,7 +25,7 @@
       <div id="carousel" class="slide">
          <img class="slide" src="/imagenes/diagnostico-computadora-reparacion3.jpg">
          <img class="slide" src="/imagenes/diagnostico-computadora-reparacion5.jpg">
-         <img class="slide" src="/imagenes/diagnostico-computadora-reparacion6.jpg"> 
+         <img class="slide" src="/imagenes/diagnostico-computadora-reparacion6.jpg">
          <a class="w3-btn-floating" onclick="carousel(-1)">Left;</a>
          <a class="w3-btn-floating" onclick="carousel(+1)">Right;</a>
      </div>
