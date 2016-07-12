@@ -3,32 +3,39 @@
     <head>
         <meta charset="utf-8">
         <script language="javascript" type="text/javascript">
-        var slideIndex = 0;
-        carousel();
+        $( window ).load( function() {
 
-        function carousel() {
-        var i;
-        var x = document.getElementsByClassName("slide");
-        for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > x.length) {slideIndex = 1}
-        x[slideIndex-1].style.display = "block";
-        setTimeout(carousel, 2000); // Change image every 2 seconds
-        }
+    $( '.sldr' ).each( function() {
+        var th = $( this );
+        th.slide({
+            focalClass    : 'focalPoint',
+            offset        : th.width() / 2,
+            sldrWidth     : 'responsive',
+            nextSlide     : th.nextAll( '.sldr-nav.next:first' ),
+            previousSlide : th.nextAll( '.sldr-nav.prev:first' ),
+            selectors     : th.nextAll( '.selectors:first' ).find( 'li' ),
+            toggle        : th.nextAll( '.captions:first' ).find( 'div' ),
+            sldrInit      : sldrInit,
+            sldrStart     : sldrStart,
+            sldrComplete  : sldrComplete,
+            sldrLoaded    : sldrLoaded,
+            sldrAuto      : true,
+            sldrTime      : 2000,
+            hasChange     : true
+        });
+    });
+
+});
         </script>
          <title>testing</title>
      </head>
     <body>
-      <div class="slide">
-         <img class="slide" slideIndex="1" src="/imagenes/diagnostico-computadora-reparacion3.jpg">
-         <img class="slide" slideIndex="2" src="/imagenes/diagnostico-computadora-reparacion5.jpg">
-         <img class="slide" slideIndex="3" src="/imagenes/diagnostico-computadora-reparacion6.jpg">
-         <a class="w3-btn-floating" onclick="plusDivs(-1)">&#10094;</a>
-         <a class="w3-btn-floating" onclick="plusDivs(+1)">&#10095;</a>
-
-
-       </div>
+      <div id="slidehome"class="slide">
+        <ul class="anime">
+         <li class="image1"> <img src="/imagenes/diagnostico-computadora-reparacion3.jpg" width="1200" height="900">
+         <li class="image2"> <img src="/imagenes/diagnostico-computadora-reparacion5.jpg" width="1200" height="900">
+         <li class="image3"> <img src="/imagenes/diagnostico-computadora-reparacion6.jpg" width="1200" height="900">
+       </ul>
+     </div>
     </body>
 </html>
