@@ -1,7 +1,7 @@
 .slide{
     border: .5em solid #ed9ce3;
-    width: 1200px;
-    height: 800px;
+    width: 900px;
+    height: 600px;
     margin: 2% auto;
     border-radius: .5em;
     box-shadow: 10px 10px 5px #888;
@@ -9,8 +9,8 @@
 }
 
 .slide img{
-    width: 1200px;
-    height: 800px;
+    width: 900px;
+    height: 600px;
     position: absolute;
 }
 
