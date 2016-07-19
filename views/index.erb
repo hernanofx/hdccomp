@@ -4,8 +4,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
- <link href="<%= url('/css/styles.css') %>" rel="stylesheet" type="text/css" />
- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link href="<%= url('/css/styles.css') %>" rel="stylesheet" type="text/css" />
+<script src="/js/slidef.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <style>
 html,body,h1,h2,h3,h4,h5 {font-family: "Lato", sans-serif}
 .mySlides {display:none}
@@ -192,36 +193,6 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Lato", sans-serif}
   </div>
 </footer>
 <!-- Footer -->
-
-<script>
-// Slideshow script
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function currentDiv(n) {
-  showDivs(slideIndex = n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demodots");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length} ;
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-     dots[i].className = dots[i].className.replace(" w3-white", "");
-  }
-  x[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " w3-white";
-}
-</script>
 
 </body>
 </html>
