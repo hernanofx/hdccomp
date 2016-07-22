@@ -28,3 +28,7 @@ get '/presupuesto' do
 get '/nosotros' do
   erb :nosotros
   end
+
+get '/popupform' do
+    erb :popupform
+  end
