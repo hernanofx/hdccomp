@@ -1,4 +1,4 @@
-function slide (){
+function slideh (){
 
 var slideIndex = 0;
 showDivs(slideIndex);
