@@ -1,24 +1,30 @@
-setInterval('avanzaSlide()', 5000);
-var arrayImagenes = new Array(".img1", ".img2", ".img3");
-var contador = 0;
+var slideIndex = 2;
+showDivs(slideIndex);
 
-function mostrar(img) {
-    $(img).ready(function() {
-        $(arrayImagenes[contador]).fadeIn(1500);
-    });
+function plusDivs(n) {
+    showDivs(slideIndex += n);
 }
 
-function ocultar(img) {
-    $(img).ready(function() {
-        $(arrayImagenes[contador]).fadeOut(1500);
-    });
+function currentDiv(n) {
+    showDivs(slideIndex = n);
 }
 
-function avanzaSlide() {
-    //se oculta la imagen actual
-    ocultar(arrayImagenes[contador]);
-    //aumentamos el contador en una unidad
-    contador = (contador + 1) % 3;
-    //mostramos la nueva imagen
-    mostrar(arrayImagenes[contador]);
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demodots");
+    if (n > x.length) {
+        slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = x.length
+    };
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-white", "");
+    }
+    x[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " w3-white";
 }
