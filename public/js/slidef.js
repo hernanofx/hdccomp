@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 var slideIndex = 2;
+=======
+var slideIndex = 0;
+>>>>>>> e3153c408b764e29087ec8510274352b21d0c8e2
 showDivs(slideIndex);
 
 function plusDivs(n) {
