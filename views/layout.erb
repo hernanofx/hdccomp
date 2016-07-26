@@ -11,43 +11,44 @@
                     <a href="#">Empresas</a>
                     <a href="#">Web</a>
                 </div>
-
-            </li>
-            <li style="width:30%">
-                <a class="w3-dark-grey" href="#">
-                    <p>Cobertura en CABA y GBA
-                    </p>
-                </a>
-            </li>
-            <li style="width:30%">
-                <a class="w3-blue-grey" href="#">
-                    <p>
-                        Llamenos al 15-59257868
-                    </p>
-                </a>
-            </li>
-            <li style="width:%20">
-                <a class="w3-padding" href="mailto:hernanofx@hotmail.com?subject=contacto">
-                    Contacto</a>
-                <i class="material-icons">info</i>
             </li>
 
-        </ul>
+        </li>
+        <li style="width:30%">
+            <a class="w3-dark-grey" href="#">
+                <p>Cobertura en CABA y GBA
+                </p>
+            </a>
+        </li>
+        <li style="width:30%">
+            <a class="w3-blue-grey" href="#">
+                <p>
+                    Llamenos al 15-59257868
+                </p>
+            </a>
+        </li>
+        <li style="width:%20">
+            <a class="w3-padding" href="mailto:hernanofx@hotmail.com?subject=contacto">
+                Contacto</a>
+            <i class="material-icons">info</i>
+        </li>
 
+    </ul>
+
+</div>
+
+<head>
+    <meta charset="utf-8">
+    <link href="<%= url('/css/styles.css') %>" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>
+        Compus | Alta calidad en soluciones informáticas</title>
+    <!-- Favicon fuente -->
+    <link href="/imagenes/favicon.ico" rel="shortcut icon">
+</head>
+<body>
+    <div>
+        <%= yield %>
     </div>
-
-    <head>
-        <meta charset="utf-8">
-        <link href="<%= url('/css/styles.css') %>" rel="stylesheet" type="text/css"/>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <title>
-            Compus | Alta calidad en soluciones informáticas</title>
-        <!-- Favicon fuente -->
-        <link href="/imagenes/favicon.ico" rel="shortcut icon">
-    </head>
-    <body>
-        <div>
-            <%= yield %>
-        </div>
-    </body>
+</body>
 </html>
