@@ -25,6 +25,11 @@ get '/presupuesto' do
  erb :presupuesto
  end
 
+ get '/presupuesto2' do
+  erb :presupuesto2
+  end
+
+
 get '/nosotros' do
   erb :nosotros
   end
