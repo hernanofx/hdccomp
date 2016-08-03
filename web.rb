@@ -29,8 +29,8 @@ get '/presupuesto2' do
   erb :presupuesto2
   end
 
-post '/client_form'
-  erb :presupuesto2
+post '/presupuesto2'
+  erb :client_form
   end
 
 get '/nosotros' do
