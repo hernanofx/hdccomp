@@ -30,7 +30,7 @@ get '/presupuesto2' do
   end
 
 post '/client_form' do
-  "sarasa"
+  "Presupuesto enviado #{params[primernombre]}, #{params[apellido]}, #{params[telefono]}, #{params[email]}, #{params[calle]}, #{params[altura]}, #{params[piso]}, #{params[localidad]}"
   end
 
 get '/nosotros' do
