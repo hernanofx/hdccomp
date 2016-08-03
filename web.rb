@@ -30,7 +30,7 @@ get '/presupuesto2' do
   end
 
 post '/client_form' do
-  erb :presupuesto2
+  "sarasa"
   end
 
 get '/nosotros' do
