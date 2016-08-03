@@ -29,7 +29,7 @@ get '/presupuesto2' do
   erb :presupuesto2
   end
 
-post '/presupuesto2'
+post '/client_form'
   erb :client_form
   end
 
