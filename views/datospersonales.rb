@@ -27,4 +27,4 @@ localidad = gets.chomp
 localidad.capitalize
 
 puts "Tu nombre es #{primer_nombre} #{apellido}, vivis en #{calle} #{altura} piso #{piso} en la localidad de #{localidad}, tu teléfono es #{telefono} y tu email de contacto es #{email_de_contacto}"
-puts "Nos estaremos comunicando a la brevedad contigo #{primer_nombre}"
+puts "Nos estaremos comunicando a la brevedad contigo #{primer_nombre.capitalize}"
