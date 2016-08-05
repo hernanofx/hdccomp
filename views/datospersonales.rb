@@ -1,3 +1,6 @@
+require 'rubygems'
+require 'sinatra'
+
 print "¿Cuál es tu primer nombre?"
 primer_nombre = gets.chomp
 primer_nombre.capitalize!
