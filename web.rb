@@ -13,17 +13,9 @@ get '/home' do
   erb :index
 end
 
-get '/particulares' do
-  erb :particulares
+get '/servicios' do
+  erb :servicios
 end
-
-get '/empresas' do
-  erb :empresas
-end
-
-get '/presupuesto' do
- erb :presupuesto
- end
 
 get '/presupuesto2' do
   erb :presupuesto2
