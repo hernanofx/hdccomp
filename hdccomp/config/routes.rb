@@ -1,1 +1,0 @@
-root "hdcompus#index.html"
