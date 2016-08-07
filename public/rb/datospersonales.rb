@@ -1,4 +1,4 @@
-#!/usr/bin/ruby
+!/usr/bin/ruby
 
 print "¿Cuál es tu primer nombre?"
 primer_nombre = gets.chomp
