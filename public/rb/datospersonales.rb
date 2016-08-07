@@ -1,4 +1,4 @@
-!/usr/bin/ruby
+require 'rubygems'
 
 print "¿Cuál es tu primer nombre?"
 primer_nombre = gets.chomp
