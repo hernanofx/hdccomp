@@ -4,4 +4,4 @@
 
 ### En desarrollo
 
-![Vista previa](https://raw.githubusercontent.com/hernanofx/hdcomp/master/public/imagenes/captura.png)
+![Vista previa](https://raw.githubusercontent.com/hernanofx/hdccomp/master/public/imagenes/captura.png)
